@@ -1,13 +1,13 @@
-import {SafeAreaView} from 'react-native';
-import Item from './components/Items/Item';
-
-
+import {SafeAreaView, Text} from 'react-native';
+import {useState} from 'react';
 function App() {
+  const [text, setText] = useState('Hello, world!');
   return (
     <SafeAreaView>
-      <Item Price={100} Name={'Table'} />
-      <Item Price={200} Name={'Chair'} />
-      <Item Price={300} Name={'Glassdoor'} />
+      <Text
+        onPress={() => setText('Hello world! I learned how to change state')}>
+        {text}
+      </Text>
     </SafeAreaView>
   );
 }
