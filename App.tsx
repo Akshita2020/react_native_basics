@@ -1,20 +1,10 @@
-import {Text, SafeAreaView} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import MyText from './components/MyText/Text';
 
 function App() {
   return (
     <SafeAreaView>
-      <Text
-        style={{
-          color: 'red',
-          fontSize: 42,
-          fontFamily: 'Arial',
-          fontStyle: 'italic',
-          fontWeight: '700',
-          // letterSpacing: 10,
-          textAlign: 'center',
-        }}>
-        Hello, world!
-      </Text>
+      <MyText />
     </SafeAreaView>
   );
 }
