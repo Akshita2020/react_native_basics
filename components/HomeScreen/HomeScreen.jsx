@@ -10,7 +10,7 @@ const HomeScreen = () => {
       }}>
       <Text
         style={{
-          color: isDarkMode ? '#222222' : '#ffffff',
+          color: isDarkMode ? '#ffffff' : '#222222',
         }}>
         Welcome to the home screen
       </Text>
