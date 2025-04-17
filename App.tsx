@@ -5,18 +5,18 @@ function App() {
     <SafeAreaView>
       <View
         style={{
-          borderWidth: 1,
-          borderTopWidth: 15,
-          borderBottomWidth: 15,
-          borderLeftWidth: 10,
-          borderRightWidth: 10,
-          borderColor: 'blue',
-          borderRadius: 10,
-          borderTopLeftRadius: 50,
-          borderTopRightRadius: 50,
-          borderBottomLeftRadius: 20,
-          borderBottomRightRadius: 20,
+          backgroundColor: 'green',
+          margin: 10,
+          // marginTop: 50,
+          // marginLeft: 100,
+          // marginRight: 100,
+          // marginBottom: 50,
+          marginVertical: 50,
+          marginHorizontal: 50,
         }}>
+        <Text> Hello world!</Text>
+      </View>
+      <View style={{backgroundColor: 'green'}}>
         <Text> Hello world!</Text>
       </View>
     </SafeAreaView>
