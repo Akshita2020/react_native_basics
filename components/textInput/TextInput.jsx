@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView, TextInput,Switch,View,Text} from 'react-native';
 
+
 export const TextInputs = () => {
   const [name, setName] = React.useState('');
   const [password, setPassword] = React.useState('');
