@@ -1,33 +1,13 @@
 import React from 'react';
-import {Image, SafeAreaView, ScrollView} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import TextInput from './components/textInput/TextInput';
+import Button from './components/Button/Button';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        horizontal={true}
-        contentContainerStyle={{backgroundColor: 'yellow', height: 600}}
-        onScroll={() => {
-          console.log('we are scrolling');
-        }}>
-        <Image
-          source={require('./assets/cake.png')}
-          style={{width: 500, height: 500, margin: 10}}
-        />
-        <Image
-          source={require('./assets/cake.png')}
-          style={{width: 500, height: 500, margin: 10}}
-        />
-        <Image
-          source={require('./assets/cake.png')}
-          style={{width: 500, height: 500, margin: 10}}
-        />
-        <Image
-          source={require('./assets/cake.png')}
-          style={{width: 500, height: 500, margin: 10}}
-        />
-      </ScrollView>
+      <TextInput />
+      <Button />
     </SafeAreaView>
   );
 };

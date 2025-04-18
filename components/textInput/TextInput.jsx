@@ -1,10 +1,12 @@
 import React from 'react';
-import {SafeAreaView, TextInput} from 'react-native';
+import {SafeAreaView, TextInput,Switch,View,Text} from 'react-native';
 
-const textInput = () => {
+export const TextInputs = () => {
   const [name, setName] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [email, setEmail] = React.useState('');
+  const [shouldKeepLoggedIn, setShouldKeepLoggedIn] = React.useState(true);
+
   return (
     <SafeAreaView>
       <TextInput
@@ -43,8 +45,15 @@ const textInput = () => {
         keyboardType={'phone-pad'}
         returnKeyType={'go'}
       />
+      <View style={{flex:1, flexDirection:'row',  margin:10, alignItems:'center'}}>
+        <Switch
+          value={shouldKeepLoggedIn}
+          onValueChange={value => setShouldKeepLoggedIn(value)}
+        />
+        <Text >Keep me logged in!</Text>
+      </View>
     </SafeAreaView>
   );
 };
 
-export default textInput;
+export default TextInputs;
