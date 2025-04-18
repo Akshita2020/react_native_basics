@@ -1,41 +1,28 @@
-import {Text} from 'react-native';
-import React, {useState, useEffect, Component} from 'react';
-import styles from './styles';
-class MyText extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fullName: props.name + ' Tiwari',
-    };
-  }
-  componentDidMount() {
-    //It is called right after the component is rendered
-    //Perform some setup for example fetching data from API
-    console.log('Our component has been mounted');
-  }
-  componentDidUpdate(prevProps, prevState) {
-    //Called when state or props of the application is updated
-    console.log(
-      'The state of the application has been changed',
-      prevState,
-      this.state,
-    );
-  }
-  componentWillUnmount() {
-    console.log('Component is now being destroyed');
-  }
-  render() {
-    return (
-      <Text
-        style={[styles.text, styles.text1, {color: 'green'}]}
-        onPress={() =>
-          this.setState({...this.state, ...{fullName: 'Akshita, T.'}})
-        }>
-        Hello, {this.props.name}! I know that your full name is{' '}
-        {this.state.fullName}
-      </Text>
-    );
-  }
-}
+import React from 'react';
+import {SafeAreaView, Image} from 'react-native';
 
-export default MyText;
+const App = () => {
+  const [image, setImage] = React.useState('http://example.com');
+  return (
+    <SafeAreaView>
+      <Image
+        source={image}
+        style={{width: 200, height: 100, backgroundColor: 'red'}}
+        resizeMode={'center'}
+        onError={() => {
+          console.log('Error has been detected while loading an image');
+          setImage(require('../../assets/cake.png'));
+        }}
+      />
+      <Image
+        source={{
+          uri: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1089&q=80',
+        }}
+        style={{width: 200, height: 100, backgroundColor: 'blue'}}
+        resizeMode={'center'}
+      />
+    </SafeAreaView>
+  );
+};
+
+export default App;
