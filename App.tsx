@@ -1,14 +1,19 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import TextInput from './components/textInput/TextInput';
-import Button from './components/Button/Button';
+import {View} from 'react-native';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <TextInput />
-      <Button />
-    </SafeAreaView>
+    <View
+      style={{
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'flex-end',
+      }}>
+      <View style={{backgroundColor: 'yellow', width: 50, height: 200}} />
+      <View style={{backgroundColor: 'green', width: 50, height: 200}} />
+      <View style={{backgroundColor: 'black', width: 50, height: 200}} />
+    </View>
   );
 };
 
