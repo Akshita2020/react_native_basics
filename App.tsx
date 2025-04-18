@@ -1,14 +1,17 @@
-import {Button, Text, SafeAreaView} from 'react-native';
-import useToggle from './components/CustomHooks/useToggle';
+import React, {Component} from 'react';
+import {Text, SafeAreaView} from 'react-native';
 
-function App() {
-  const [isOn, toggleIsOn] = useToggle(false);
-  return (
-    <SafeAreaView>
-      <Text> Toggle is {isOn ? 'on' : 'off'}</Text>
-      <Button title={'toggle'} onPress={toggleIsOn} />
-    </SafeAreaView>
-  );
+class App extends Component {
+  constructor(props: string) {
+    super(props);
+  }
+  render() {
+    return (
+      <SafeAreaView>
+        <Text> Hello World </Text>
+      </SafeAreaView>
+    );
+  }
 }
 
 export default App;
