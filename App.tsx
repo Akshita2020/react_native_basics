@@ -4,11 +4,18 @@ import {Text, SafeAreaView} from 'react-native';
 class App extends Component {
   constructor(props: string) {
     super(props);
+    this.state = {};
   }
   render() {
     return (
       <SafeAreaView>
-        <Text> Hello World </Text>
+        <Text
+          onPress={() => {
+            this.setState({name: 'akshita'});
+          }}>
+          {' '}
+          Hello World{' '}
+        </Text>
       </SafeAreaView>
     );
   }
